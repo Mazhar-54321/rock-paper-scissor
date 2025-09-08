@@ -3,27 +3,28 @@ body {
   height: 100vh;
   background-color: #89c15e;
   position: relative;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
+  font-family: 'Roboto', sans-serif;
   
 }
 .score{
     position: relative;
     color: white;
     top:10%;
-    left:25%;
-    border: 1px solid white;
-    padding: 10px;
-    border-radius: 8px;
-    width: 20rem;
+    left:15%;
+    border: 2px solid #FFFFFF;
+    padding: 5px;
+    border-radius: 13px;
+    width: 40rem;
     display: flex;
+    /* gap: 10px; */
     .description{
         h1{
             margin: 0px;
             padding: 0px;
+            font-weight: 40px;
         }
-        width: 50%;
+       
+        width: 70%;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -85,4 +86,50 @@ body {
     left: 12rem;
     transform: rotate(120deg);
   }
+}
+.box{
+    display: flex;
+    padding: 0.25rem;
+    width: 30%;
+    height: 6rem;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: right; */
+    text-align: center;
+    align-content: right;
+    gap: 2px;
+    /* margin: 1rem; */
+    margin-left: 1rem;
+    background-color: white;
+    color: black;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    h1{
+        padding: 0px;
+        margin:0px;
+        font-size: 60px;
+        height: 40%;
+    }
+     h4{
+            color:#656565;
+            font-size: 17px;
+            height: 40%;
+            padding: 0px;
+            margin: 0px;
+        }
+}
+button{
+    border:2px solid white;
+    border-radius: 10px;
+    font-size: 21px;
+    color:white;
+    padding: 8px 16px;
+     background-color: transparent;
+     cursor: pointer;
+;
+}
+.rules-btn{
+    right: 10%;
+    bottom: 5%;
+    position: absolute;
 }
