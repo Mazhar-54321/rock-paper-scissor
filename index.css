@@ -1,5 +1,88 @@
-body{
-    width: 100vw;
-    height: 100vh;
-    background-color: #89C15E;
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #89c15e;
+  position: relative;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  
+}
+.score{
+    position: relative;
+    color: white;
+    top:10%;
+    left:25%;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 20rem;
+    display: flex;
+    .description{
+        h1{
+            margin: 0px;
+            padding: 0px;
+        }
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.rps-triangle {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    top:20%;
+    left:20%;
+  .line {
+    height: 1rem;
+    background-color: #000000;
+    opacity: 0.64;
+    width: 18rem;
+    position: absolute;
+  }
+  .circle {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  .circle1 {
+    top: 3rem;
+    left: 5rem;
+    border: 1rem solid #0074B6;
+    background-image: url("scissor.png");
+    
+  }
+  .circle2 {
+    top: 3rem;
+    left: 19rem;
+    border: 1rem solid #BD00FF;
+    background-image: url("paper.png");
+  }
+  .circle3 {
+    top:14rem;
+    left:13rem;
+    border: 1rem solid #FFA943;
+    background-image: url("rock.png");
+  }
+  .line1 {
+    top: 6rem;
+    left: 7rem;
+  }
+  .line2 {
+    top: 14rem;
+    left: 3rem;
+    transform: rotate(51deg);
+  }
+  .line3 {
+    top: 12rem;
+    left: 12rem;
+    transform: rotate(120deg);
+  }
 }
