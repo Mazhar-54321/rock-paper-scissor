@@ -8,6 +8,9 @@ const rpsTriangle = document.querySelector(".rps-triangle");
 const decider = document.querySelector(".decider");
 const heading1 = document.querySelector(".heading1");
 const heading2 = document.querySelector(".heading2");
+const rulesBtn =document.querySelector(".rules-btn");
+const rulesPopup = document.querySelector(".rules-popup");
+const nextBtn =document.querySelector(".next-btn");
 const player1Normal = document.querySelector(".player1-normal");
 const player1Winner = document.querySelector(".player1-winner");
 const player1Winner1 = document.querySelector(".player1-winner-1");
@@ -71,7 +74,10 @@ function selectionHandler(key) {
       player1Winner1.style.backgroundImage = `url(${images[userValue]})`
       heading1.textContent = "YOU WIN";
       scores[0]++;
-      localStorage.setItem("scores-rps",scores.toString())
+      localStorage.setItem("scores-rps",scores.toString());
+      rulesBtn.style.right='13%';
+      nextBtn.style.display='block';
+      rulesPopup.style.right='13%';
     } else {
       heading1.textContent = "YOU LOST";
       result = 1;
@@ -97,6 +103,9 @@ function selectionHandler(key) {
 function reset(){
     rpsTriangle.style.display = "block";
     decider.style.display = "none";
+    rulesBtn.style.right='2%';
+      nextBtn.style.display='none';
+      rulesPopup.style.right='2%';
     userValue = null;
   computerValue = null;
   result = null;

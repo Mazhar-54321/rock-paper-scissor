@@ -122,17 +122,24 @@ body {
 button{
     border:2px solid white;
     border-radius: 10px;
-    font-size: 21px;
+    font-size: 14px;
     color:white;
     padding: 8px 32px;
      background-color: transparent;
      cursor: pointer;
+     font-weight: bold
 ;
 }
 .rules-btn{
-    right: 10%;
+    right: 2%;
     bottom: 5%;
     position: absolute;
+}
+.next-btn{
+    right: 2%;
+    bottom: 5%;
+    position: absolute;
+    display: none;
 }
 .rules-popup{
     display: none;
@@ -144,7 +151,7 @@ button{
     color: white;
     padding: 1rem;
     position:absolute;
-    right: 10%;
+    right: 2%;
     bottom: 13%;
     h1{
         text-align: center;
