@@ -36,7 +36,7 @@
    <div onclick="selectionHandler(2)" class="circle circle3"></div>
    </section>
     <section class="rules-popup">
-      <div onclick="hidePopup()" class="cancel-btn">X</div>
+      <div onclick="togglePopup(false)" class="cancel-btn">X</div>
       <h1>General rules</h1>
       <ul>
         <li>Rock beats scissors,scissors beat paper, and paper beats rock</li>
@@ -53,7 +53,7 @@
         </li>
       </ul>
     </section>
-    <button onclick="showPopup()" class="rules-btn">RULES</button>
+    <button onclick="togglePopup()" class="rules-btn">RULES</button>
     <button onclick="next()" class="next-btn">NEXT</button>
     <section class="decider">
       <div class="player1" style="position: relative; text-align: center">
