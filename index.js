@@ -14,7 +14,10 @@ const player1Winner1 = document.querySelector(".player1-winner-1");
 const player2Normal = document.querySelector(".player2-normal");
 const player2Winner = document.querySelector(".player2-winner");
 const player2Winner1 = document.querySelector(".player2-winner-1");
+const computerScore =document.querySelector(".computer-score");
+const yourScore =document.querySelector(".your-score");
 
+const scores = [0,0]
 
 function showPopup() {
   const rulesPopup = document.getElementsByClassName("rules-popup")[0];
@@ -67,6 +70,8 @@ function selectionHandler(key) {
       player1Winner1.style.border = `1rem solid ${colors[userValue]}`
       player1Winner1.style.backgroundImage = `url(${images[userValue]})`
       heading1.textContent = "YOU WIN";
+      scores[0]++;
+      localStorage.setItem("scores-rps",scores.toString())
     } else {
       heading1.textContent = "YOU LOST";
       result = 1;
@@ -77,10 +82,15 @@ function selectionHandler(key) {
        player1Normal.style.border = `1rem solid ${colors[userValue]}`
       player1Normal.style.backgroundImage = `url(${images[userValue]})`
       player2Winner1.style.border = `1rem solid ${colors[computerValue]}`
-      player2Winner1.style.backgroundImage = `url(${images[computerValue]})`
+      player2Winner1.style.backgroundImage = `url(${images[computerValue]})`;
+      scores[1]++;
+     localStorage.setItem("scores-rps",scores.toString())
+
     }
     heading2.textContent = "AGAINST PC";
   }
+  yourScore.textContent=scores[0];
+  computerScore.textContent=scores[1];
   rpsTriangle.style.display = "none";
   decider.style.display = "flex";
 }
@@ -91,3 +101,17 @@ function reset(){
   computerValue = null;
   result = null;
 }
+document.addEventListener("DOMContentLoaded",function(){
+    console.log(localStorage.getItem("scores-rps"));
+    let localScores = localStorage.getItem("scores-rps");
+    if(localScores){
+        let splitArray = localScores.split(",");
+        console.log(splitArray)
+        scores[0]=(splitArray[0]);
+        scores[1]=(splitArray[1]);
+    }
+    console.log(scores)
+    yourScore.textContent=scores[0];
+  computerScore.textContent=scores[1];
+
+})
