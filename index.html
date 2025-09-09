@@ -1,46 +1,146 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock paper scissor</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <section class="score">
-        <div class="description">
-            <h1>ROCK</h1>
-            <h1>PAPER</h1>
-            <h1>SCISSORS</h1>
-        </div>
-        <div class="box computer-score">
-            <h4>COMPUTER SCORE</h4>
-            <h1>0</h1>
-        </div>
-        <div class="box your-score">
-            <h4>YOUR SCORE</h4>
-            <h1>0</h1>
-        </div>
+      <div class="description">
+        <h1>ROCK</h1>
+        <h1>PAPER</h1>
+        <h1>SCISSORS</h1>
+      </div>
+      <div class="box computer-score">
+        <h4>COMPUTER SCORE</h4>
+        <h1>0</h1>
+      </div>
+      <div class="box your-score">
+        <h4>YOUR SCORE</h4>
+        <h1>0</h1>
+      </div>
     </section>
-   <section class="rps-triangle">
+    <section class="rps-triangle">
 <div class="line line1"></div>
   <div class="line line2"></div>
   <div class="line line3"></div>
-  <div class="circle circle1"></div>
-  <div class="circle circle2"></div>
-   <div class="circle circle3"></div>
+  <div onclick="selectionHandler(0)" class="circle circle1">
+     
+  </div>
+  <div onclick="selectionHandler(1)" class="circle circle2"></div>
+   <div onclick="selectionHandler(2)" class="circle circle3"></div>
    </section>
-   <section class="rules-popup">
-    <div class="cancel-btn">X</div>
-    <h1>General rules</h1>
-    <ul>
+    <section class="rules-popup">
+      <div onclick="hidePopup()" class="cancel-btn">X</div>
+      <h1>General rules</h1>
+      <ul>
         <li>Rock beats scissors,scissors beat paper, and paper beats rock</li>
-        <li>Agree ahead of time whether you'll count off "rock,paper,scissors."</li>
-        <li>Use rock,paper,scissors to settle minor decisions or simple play to pass the time</li>
-        <li>If both players lay down the same hand, each player lays down another hand</li>
-    </ul>
-   </section>
-   <button class="rules-btn">RULES</button>
-</body>
+        <li>
+          Agree ahead of time whether you'll count off "rock,paper,scissors."
+        </li>
+        <li>
+          Use rock,paper,scissors to settle minor decisions or simple play to
+          pass the time
+        </li>
+        <li>
+          If both players lay down the same hand, each player lays down another
+          hand
+        </li>
+      </ul>
+    </section>
+    <button onclick="showPopup()" class="rules-btn">RULES</button>
+
+    <section class="decider">
+      <div class="player1" style="position: relative;text-align: center;">
+        <span style="position: absolute;left: 20px;top:-30px">YOU PICKED</span>
+         <div
+          style="
+            border: 1rem solid #0074b6;
+            background-image: url('scissor.png');
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            z-index: 100;
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="player1-normal"
+        >
+    </div>
+     <div class="ripple-container player1-winner">
+          <div
+            style="
+              border: 1rem solid #0074b6;
+              background-image: url('scissor.png');
+              background-color: white;
+              width: 100px;
+              height: 100px;
+              border-radius: 100%;
+              z-index: 100;
+              background-repeat: no-repeat;
+              background-position: center;
+            "
+            class="player1-winner-1"
+          ></div>
+
+          <span style="opacity: 1"></span>
+          <span style="opacity: 0.6"></span>
+          <span style="opacity: 0.4"></span>
+          <span style="opacity: 0.2"></span>
+        </div>
+      </div>
+      <div class="game-result">
+        <h1 class="heading1">YOU LOST</h1>
+        <h1 class="heading2">AGAINST PC</h1>
+        <button onclick="reset()" style="background-color: white;color: #6B6B6B;font-size: 15px;">PLAY AGAIN</button>
+      </div>
+      <div class="player2" style="position: relative;text-align: center;">
+        <span style="position: absolute;right: 20px;top:-30px">PC PICKED</span>
+       
+      <div
+          style="
+            border: 1rem solid #0074b6;
+            background-image: url('scissor.png');
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            z-index: 100;
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+          class="player2-normal"
+        >
+    </div>
+     <div class="ripple-container player2-winner">
+          <div
+            style="
+              border: 1rem solid #0074b6;
+              background-image: url('scissor.png');
+              background-color: white;
+              width: 100px;
+              height: 100px;
+              border-radius: 100%;
+              z-index: 100;
+              background-repeat: no-repeat;
+              background-position: center;
+            "
+            class="player2-winner-1"
+          ></div>
+
+          <span style="opacity: 1"></span>
+          <span style="opacity: 0.6"></span>
+          <span style="opacity: 0.4"></span>
+          <span style="opacity: 0.2"></span>
+        </div>
+    </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
 </html>
