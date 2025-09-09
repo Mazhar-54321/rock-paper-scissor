@@ -189,6 +189,7 @@ button{
   align-items: center;
 }
 
+
 .ripple-container span {
   position: absolute;
   background-color: #2E9A25;
@@ -210,6 +211,26 @@ button{
     justify-content: space-between;
     color: white;
     display: none;
+}
+.hurray-container{
+display: none;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+}
+.hurray{
+    
+    flex-direction: column;
+    width: 40rem;
+    background-position-y: bottom;
+    background-position-x:50%;
+    background-image: url('Vector.png');
+    background-repeat: no-repeat;
+    background-size: 30%;
+    text-align: center;
 }
 .ripple-container span:nth-child(2) {
   animation-delay: 1s;

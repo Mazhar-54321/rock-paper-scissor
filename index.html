@@ -54,11 +54,13 @@
       </ul>
     </section>
     <button onclick="showPopup()" class="rules-btn">RULES</button>
-     <button onclick="showPopup()" class="next-btn">NEXT</button>
+    <button onclick="next()" class="next-btn">NEXT</button>
     <section class="decider">
-      <div class="player1" style="position: relative;text-align: center;">
-        <span style="position: absolute;left: 20px;top:-30px">YOU PICKED</span>
-         <div
+      <div class="player1" style="position: relative; text-align: center">
+        <span style="position: absolute; left: 20px; top: -30px"
+          >YOU PICKED</span
+        >
+        <div
           style="
             border: 1rem solid #0074b6;
             background-image: url('scissor.png');
@@ -71,9 +73,8 @@
             background-position: center;
           "
           class="player1-normal"
-        >
-    </div>
-     <div class="ripple-container player1-winner">
+        ></div>
+        <div class="ripple-container player1-winner">
           <div
             style="
               border: 1rem solid #0074b6;
@@ -98,12 +99,19 @@
       <div class="game-result">
         <h1 class="heading1">YOU LOST</h1>
         <h1 class="heading2">AGAINST PC</h1>
-        <button onclick="reset()" style="background-color: white;color: #6B6B6B;font-size: 15px;">PLAY AGAIN</button>
+        <button
+          onclick="reset()"
+          style="background-color: white; color: #6b6b6b; font-size: 15px"
+        >
+          PLAY AGAIN
+        </button>
       </div>
-      <div class="player2" style="position: relative;text-align: center;">
-        <span style="position: absolute;right: 20px;top:-30px">PC PICKED</span>
-       
-      <div
+      <div class="player2" style="position: relative; text-align: center">
+        <span style="position: absolute; right: 20px; top: -30px"
+          >PC PICKED</span
+        >
+
+        <div
           style="
             border: 1rem solid #0074b6;
             background-image: url('scissor.png');
@@ -116,9 +124,8 @@
             background-position: center;
           "
           class="player2-normal"
-        >
-    </div>
-     <div class="ripple-container player2-winner">
+        ></div>
+        <div class="ripple-container player2-winner">
           <div
             style="
               border: 1rem solid #0074b6;
@@ -139,8 +146,22 @@
           <span style="opacity: 0.4"></span>
           <span style="opacity: 0.2"></span>
         </div>
-    </div>
+      </div>
     </section>
+    <div class="hurray-container">
+      <section class="hurray">
+        <img
+          src="stars.png"
+          alt=""
+          style="width: 31rem; height: 18rem; object-fit: contain"
+        />
+      </section>
+      <span style="color: white;font-size: 91px;font-weight: 300;">HURRAY!!</span>
+    <span style="color: white;font-size: 41px;font-weight: 300;">YOU WON THE GAME</span>
+<button onclick="reset()" onclick="reset()"
+          style="background-color: white; color: #6b6b6b; font-size: 15px;margin-top: 10px;">PLAY AGAIN</button>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
